@@ -21,11 +21,13 @@ clocks = ee.Router.clocks(app)
 running = True
 while running:
     clocks.tick(45)
-    screen.fill(ee.Colors.white)
+    screen.fill(color=ee.Colors.white)
 
     for event in ee.Events.get():
         if event.type == ee.EventType.quitAction:
             running = False
+
+    ee.Router.flip()
 
 quit()
 ```
