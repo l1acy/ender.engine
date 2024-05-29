@@ -1,1 +1,27 @@
 ![ender.engine](static/banner.png)
+
+
+<a href="https://github.com/pygame/pygame/"><img src="https://raw.githubusercontent.com/pygame/pygame/main/docs/reST/_static/pygame_logo.svg" height=20></a> fork
+
+Use example:
+```py
+import ee
+
+app = ee.Router(
+    title="GitHub Example",
+    size=ee.RouterSize(width=500, height=333)
+)
+screen = app.build()
+clocks = ee.Router.clocks(app)
+
+running = True
+while running:
+    clocks.tick(45)
+    screen.fill(ee.Colors.white)
+
+    for event in ee.Events.get():
+        if event.type == ee.EventType.quitAction:
+            running = False
+
+quit()
+```
