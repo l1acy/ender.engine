@@ -1,22 +1,22 @@
-from pygame import Surface
+# from pygame import Surface
 
-type crd = tuple[int, int]
+# type crd = tuple[int, int]
 
-class AnchorProvider:
-    def c(x: int, y: int, screen: Surface) -> crd:
-        cx, cy = screen.get_size()
+# class AnchorProvider:
+#     def c(x: int, y: int, screen: Surface) -> crd:
+#         cx, cy = screen.get_size()
 
-        return (cx + x, cy + y)
+#         return (cx + x, cy + y)
     
-    def lu(x: int, y: int, screen: Surface) -> crd:
-        return (x, y)
+#     def lu(x: int, y: int, screen: Surface) -> crd:
+#         return (x, y)
     
-    def lc(x: int, y: int, screen: Surface) -> crd:
-        cy = screen.get_height() / 2
+#     def lc(x: int, y: int, screen: Surface) -> crd:
+#         cy = screen.get_height() / 2
 
-        return (x, cy + y)
+#         return (x, cy + y)
     
-    def ld(x: int, y: int, screen: Surface) -> crd:
-        height = screen.get_height()
+#     def ld(x: int, y: int, screen: Surface) -> crd:
+#         height = screen.get_height()
 
-        return (x, height - y)
+#         return (x, height - y)
