@@ -1,7 +1,7 @@
 ![ender.engine](static/banner.png)
 
 
-<a href="https://github.com/pygame/pygame/"><img src="https://raw.githubusercontent.com/pygame/pygame/main/docs/reST/_static/pygame_logo.svg" height=20></a> fork
+<a href="https://github.com/pygame/pygame/"><img src="https://raw.githubusercontent.com/pygame/pygame/main/docs/reST/_static/pygame_logo.svg" alt="pygame" height=16></a> fork
 
 Use example:
 ```py
