@@ -7,6 +7,9 @@
 
 <p><a href="https://github.com/pygame/pygame"><img src="https://raw.githubusercontent.com/pygame/pygame/main/docs/reST/_static/pygame_logo.svg" height=16></a> fork</p>
 
+> [!Warning]
+> ender.engine is in development mode
+
 Use example:
 ```py
 import ee
@@ -30,4 +33,10 @@ while running:
     ee.Router.flip()
 
 quit()
+```
+
+Install these libraries before use:
+```py
+pip install pygame
+pip install asyncio
 ```
