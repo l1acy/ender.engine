@@ -37,6 +37,5 @@ quit()
 
 Install these libraries before use:
 ```py
-pip install pygame
-pip install asyncio
+pip install -r requirements.txt
 ```
