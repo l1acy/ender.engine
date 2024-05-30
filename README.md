@@ -5,7 +5,7 @@
   <img src="https://img.shields.io/badge/status-indev-lightgray">
 </p>
 
-<p><a href="https://github.com/pygame/pygame"><img src="https://raw.githubusercontent.com/pygame/pygame/main/docs/reST/_static/pygame_logo.svg" height=16></a> fork</p>
+An extension for <a href="https://github.com/pygame/pygame"><img src="https://raw.githubusercontent.com/pygame/pygame/main/docs/reST/_static/pygame_logo.svg" height=16></a>
 
 > [!Warning]
 > ender.engine is in development mode
