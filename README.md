@@ -54,3 +54,7 @@ Contributors:
       <th>l1acy</th>
     </tr>
 </table>
+
+TODO:
+- [ ] Make time system
+- [ ] Make UI provider
