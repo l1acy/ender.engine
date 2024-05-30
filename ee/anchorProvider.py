@@ -20,3 +20,21 @@ class AnchorProvider:
         height = screen.get_height()
 
         return (x, height - y)
+
+    def ru(x: int, y: int, screen: Surface) -> crd:
+        width = screen.get_width()
+        height = screen.get_height()
+
+        return (width / 2 - x, height / 2 + y )
+    
+    def rc(x: int, y: int, screen: Surface):
+        width = screen.get_width()
+        height = screen.get_height()
+
+        return (width - x, height / 2)
+    
+    def rd(x: int, y: int, screen: Surface):
+        width = screen.get_width()
+        height = screen.get_height()
+
+        return (width - x, height - y)
