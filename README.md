@@ -39,3 +39,17 @@ Install these libraries before use:
 ```py
 pip install -r requirements.txt
 ```
+
+Contributors:
+
+<div style="display: flex; gap: 8px; flex-direction: column; justify-content: center">
+|  |
+
+<table style="border: none">
+    <tr>
+      <th><img src="https://avatars.githubusercontent.com/u/64615032?v=4" width=64 style="border-radius: 100px"></th>
+    </tr>
+    <tr>
+      <th>stefanlight</th>
+    </tr>
+</table>
