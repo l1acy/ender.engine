@@ -8,7 +8,7 @@
 An extension for <a href="https://github.com/pygame/pygame"><img src="https://raw.githubusercontent.com/pygame/pygame/main/docs/reST/_static/pygame_logo.svg" height=16></a>
 
 > [!Warning]
-> ender.engine is in development mode
+> Please do not use the button provider as it is in development mode
 
 Use example:
 ```py
