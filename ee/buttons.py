@@ -2,7 +2,11 @@ from typing import Callable
 
 from pygame.mouse import get_pos as cursorPosition
 
-type ButtonType = tuple[Button, Callable]
+from pygame.display import Info as display
+# from pygame.display import _VidInfo
+
+from typing import Any
+
 
 class Button:
     def __init__(
@@ -72,9 +76,11 @@ class ButtonsGroup:
 class ButtonsProvider:
     def __init__(
         self,
-        buttons: list[ButtonsGroup]
+        buttons: list[ButtonsGroup],
+        display: Any
     ) -> None:
         self.buttons = buttons
+        self.display = display
     
     def check(self) -> None:
         """
@@ -98,7 +104,11 @@ class ButtonsProvider:
 
                 xto, yto = button.b
 
+                xto *= 1.75
+                yto *= 1.75
+
                 x, y = cursorPosition()
+
 
                 if x > xfrom and x < xto and y > yfrom and y < yto:
                     function()
