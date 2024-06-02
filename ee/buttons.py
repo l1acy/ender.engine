@@ -77,10 +77,8 @@ class ButtonsProvider:
     def __init__(
         self,
         buttons: list[ButtonsGroup],
-        display: Any
     ) -> None:
         self.buttons = buttons
-        self.display = display
     
     def check(self) -> None:
         """
