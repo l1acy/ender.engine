@@ -110,3 +110,19 @@ class ButtonsProvider:
 
                 if x > xfrom and x < xto and y > yfrom and y < yto:
                     function()
+
+
+class ButtonProvider(Button):
+    def check(self, function: Callable):
+
+        xfrom, yfrom = self.a
+
+        xto, yto = self.b
+
+        xto *= 1.75
+        yto *= 1.75
+
+        x, y = cursorPosition()
+
+        if x > xfrom and x < xto and y > yfrom and y < yto:
+            function()
