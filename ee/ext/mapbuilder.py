@@ -20,8 +20,6 @@ class MapBuilder:
     def __init__(self, text: str) -> None:
         self.text = text
 
-    def loadLocation(self, blockSize: int = 50)
-
     def build(self, screen: Surface, path: str):
 
         lines = self.text.splitlines()
