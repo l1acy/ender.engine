@@ -27,10 +27,11 @@ class Router():
 
         self.resizeable = resizable
 
-    def build(self) -> Surface:
+    def build(self, skyColor: tuple[int]) -> Surface:
         app_init()
         screen = display.set_mode((self.size.width, self.size.height), RESIZABLE)
         display.set_caption(self.title)
+        screen.fill(skyColor)
 
         return screen
 
