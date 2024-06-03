@@ -8,7 +8,7 @@
 An extension for <a href="https://github.com/pygame/pygame"><img src="https://raw.githubusercontent.com/pygame/pygame/main/docs/reST/_static/pygame_logo.svg" height=16></a>
 
 > [!Warning]
-> Please do not use the button provider as it is in development mode
+> Please don't use map builder
 
 Use example:
 ```py
