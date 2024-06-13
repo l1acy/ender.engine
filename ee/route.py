@@ -27,11 +27,14 @@ class Router():
 
         self.resizeable = resizable
 
+        self.screen: ...
+
     def build(self) -> Surface:
         app_init()
         screen = display.set_mode((self.size.width, self.size.height), RESIZABLE)
         display.set_caption(self.title)
 
+        self.screen = screen
         return screen
 
     def clocks(self):
