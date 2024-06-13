@@ -50,6 +50,3 @@ class MapBuilder:
                 x += 1
             
             y += 1
-
-
-        Router.flip()
