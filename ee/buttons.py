@@ -5,8 +5,6 @@ from pygame.mouse import get_pos as cursorPosition
 from pygame.display import Info as display
 # from pygame.display import _VidInfo
 
-from typing import Any
-
 
 class Button:
     def __init__(

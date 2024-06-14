@@ -18,6 +18,8 @@ class RouterSize:
 class Router():
     def __init__(
         self,
+        path: str,
+        resousesPath: str,
         title: str = "enger.engine",
         size = RouterSize(),
         resizable: bool = True,
@@ -28,6 +30,8 @@ class Router():
         self.resizeable = resizable
 
         self.screen: ...
+
+        self.path = path + "\\" + resousesPath + "\\"
 
     def build(self) -> Surface:
         app_init()
