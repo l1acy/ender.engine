@@ -18,22 +18,25 @@ class MapBuilder:
     1=grass.png
     ```
     """
-    def __init__(self, text: str, path: str) -> None:
+    def __init__(self, text: str, router: Router) -> None:
         self.text = text
 
         self.lines = self.text.splitlines()
         self.height = self.lines[0]
         self.data = {}
 
+        self.router = router
+
         for element in self.lines[1 + int(self.height[7:]):]:
             key, value = element.split("=")
 
-            texture = image.load(path + value)
+            texture = image.load(self.router.path + value)
 
             self.data.update({key: texture.convert_alpha()})
 
 
-    def build(self, screen: Surface):
+    def build(self):
+        screen = self.router.screen
         x = 0
         y = 0
 
