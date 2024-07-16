@@ -8,6 +8,8 @@ from pygame import (
     NOFRAME
 )
 
+import math
+
 from pygame.time import Clock
 
 @dataclass
@@ -18,8 +20,8 @@ class RouterSize:
 class Router():
     def __init__(
         self,
-        path: str,
-        resousesPath: str,
+        path: str = "",
+        resousesPath: str = "",
         title: str = "enger.engine",
         size = RouterSize(),
         resizable: bool = True,
@@ -29,7 +31,7 @@ class Router():
 
         self.resizeable = resizable
 
-        self.screen: ...
+        self.screen: Surface
 
         self.path = path + "\\" + resousesPath + "\\"
 
@@ -49,3 +51,21 @@ class Router():
 
     def flip():
         display.flip()
+
+    def fill_image(self, image: Surface):
+        sizeW = image.get_width()
+        sizeH = image.get_height()
+
+        x = 0
+        y = 0
+
+        times_x = math.ceil(self.screen.get_width() / sizeW)
+        times_y = math.ceil(self.screen.get_height() / sizeH)
+
+        for i in range(times_y):
+            x = 0
+            for block in range(times_x):
+                self.screen.blit(image, (x*sizeW, y*sizeH))
+                x += 1
+            
+            y += 1
