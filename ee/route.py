@@ -5,7 +5,8 @@ from pygame import (
     display as display,
     Surface,
     RESIZABLE,
-    NOFRAME
+    NOFRAME,
+    transform
 )
 
 import math
@@ -52,7 +53,8 @@ class Router():
     def flip():
         display.flip()
 
-    def fill_image(self, image: Surface):
+    def fill_image(self, image: Surface, scaleBy: float | int = 0):
+        image = transform.scale_by(image, scaleBy)
         sizeW = image.get_width()
         sizeH = image.get_height()
 
