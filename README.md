@@ -49,10 +49,6 @@ Contributors:
       <th><a href="https://github.com/stefanlight8"><img src="https://avatars.githubusercontent.com/u/64615032?v=4" width=64 style="border-radius: 100px"></a></th>
       <th><a href="https://github.com/l1acy"><img src="https://avatars.githubusercontent.com/u/101744830?v=4" width=64 style="border-radius: 100px"></a></th>
     </tr>
-    <tr>
-      <th>stefanlight</th>
-      <th>l1acy</th>
-    </tr>
 </table>
 
 TODO:
