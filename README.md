@@ -1,4 +1,4 @@
-![ender.engine](static/banner.png)
+[![ender.engine](static/banner.png)]("/#")
 <p>
   <img src="https://img.shields.io/badge/powered_by-pygame-green">
   <img src="https://img.shields.io/badge/python-3-yellow">
