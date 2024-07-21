@@ -14,7 +14,7 @@ class Slider:
         self.background_rect = self.background.get_rect()
 
         self.dragger = dragger
-        self.dad = self.dragger.get_rect()
+        self.dad = self.dragger.get_rect() # Drag And Drop
 
         self.dragger_button: ButtonProvider = None
 
@@ -23,8 +23,6 @@ class Slider:
         self.root = root
 
         self.percents = 0
-
-        """DragAndDrop"""
 
     def calculate(self) -> float:
         slider_width = self.background.get_width() - self.dad.width * 0.71
@@ -61,7 +59,6 @@ class Slider:
     def check(self, action: Callable = None):
         if self.dragger_button.check(action):
             self.is_follow = True
-            print("follow activated")
 
     def follow_mouse(self):
         mousePos = pygame.mouse.get_pos()
