@@ -22,7 +22,7 @@ class Router():
     def __init__(
         self,
         path: str = "",
-        resousesPath: str = "",
+        resourses_path: str = "",
         title: str = "enger.engine",
         size = RouterSize(),
         resizable: bool = True,
@@ -34,7 +34,7 @@ class Router():
 
         self.screen: Surface
 
-        self.path = path + "\\" + resousesPath + "\\"
+        self.path = path + "\\" + resourses_path + "\\"
 
     def build(self) -> Surface:
         app_init()
@@ -50,7 +50,7 @@ class Router():
     def update():
         display.update()
 
-    def flip():
+    def flip(*args):
         display.flip()
 
     def fill_image(self, image: Surface, scaleBy: float | int = 0):
