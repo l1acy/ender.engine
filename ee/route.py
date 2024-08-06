@@ -47,7 +47,7 @@ class Router():
     def clocks(self):
         return Clock()
 
-    def update():
+    def update(*args):
         display.update()
 
     def flip(*args):
