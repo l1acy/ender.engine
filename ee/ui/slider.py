@@ -14,7 +14,7 @@ class Slider:
         self.background_rect = self.background.get_rect()
 
         self.dragger = dragger
-        self.dad = self.dragger.get_rect() # Drag And Drop
+        self.dragger_rect = self.dragger.get_rect()
 
         self.dragger_button: ButtonProvider = None
 
@@ -25,15 +25,14 @@ class Slider:
         self.percents = 0
 
     def calculate(self) -> float:
-        slider_width = self.background.get_width() - self.dad.width * 0.71
+        slider_width = self.background.get_width() - self.dragger_rect.width * 0.71
         one_percents = slider_width / 100
 
-        drager_x = self.dad.x - self.background_rect.x
+        drager_x = self.dragger_rect.x - self.background_rect.x
 
         percents = round(drager_x / one_percents)
 
         self.percents = percents
-        print(percents)
         return percents
     
     def paint(self, x: int, y: int):
@@ -41,7 +40,7 @@ class Slider:
         self._y = y
         if self.dragger_button is None:
             self.dragger_button = ButtonProvider((x, y), (self.background.get_width(), self.background.get_height() + y))
-            self.dad.x = x
+            self.dragger_rect.x = x
 
 
         background_rect = self.background_rect
@@ -49,7 +48,7 @@ class Slider:
         background_rect.x = x
         self.root.blit(self.background, background_rect)
 
-        dragger_rect = self.dad
+        dragger_rect = self.dragger_rect
         dragger_rect.y = y - self.background.get_height() * 0.4
         self.root.blit(self.dragger, dragger_rect)
 
@@ -64,11 +63,11 @@ class Slider:
         mousePos = pygame.mouse.get_pos()
         max_x = self.background.get_width() + self.background_rect.x - self.dragger.get_width() / 1.4
         mX, mY, = mousePos
-        self.dad.x, self.dad.y = mX - 20, self.dad.y
-        if max_x < self.dad.x:
-            self.dad.x = max_x
-        if self.dad.x < self.background_rect.x:
-            self.dad.x = self.background_rect.x
+        self.dragger_rect.x, self.dragger_rect.y = mX - 20, self.dragger_rect.y
+        if max_x < self.dragger_rect.x:
+            self.dragger_rect.x = max_x
+        if self.dragger_rect.x < self.background_rect.x:
+            self.dragger_rect.x = self.background_rect.x
 
         self.calculate()
 
