@@ -8,6 +8,7 @@ from pygame import (
     NOFRAME,
     transform
 )
+from ee.textures import TexturesCloud
 
 import math
 
@@ -35,6 +36,8 @@ class Router():
         self.screen: Surface
 
         self.path = path + "\\" + resourses_path + "\\"
+
+        self.textures = None
 
     def build(self) -> Surface:
         app_init()
@@ -71,3 +74,9 @@ class Router():
                 x += 1
             
             y += 1
+    
+    def set_textures(self, cloud: TexturesCloud):
+        self.textures = cloud
+
+    def unload_textures(self):
+        self.textures = None
