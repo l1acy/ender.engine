@@ -8,7 +8,7 @@
 An extension for <a href="https://github.com/pygame/pygame"><img src="https://raw.githubusercontent.com/pygame/pygame/main/docs/reST/_static/pygame_logo.svg" height=16></a>
 
 > [!Warning]
-> Did not invent
+> To start using it, move the "ee" folder to your project
 
 Use example:
 ```py
